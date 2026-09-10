@@ -1,1 +1,204 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nini Hub</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0d0d0f;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 25px 20px 15px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      color: #999;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .search {
+      margin: 15px 20px;
+      background: #1a1a1e;
+      border: 1px solid #29292f;
+      border-radius: 14px;
+      padding: 14px;
+      color: white;
+      width: calc(100% - 40px);
+      outline: none;
+      font-size: 15px;
+    }
+
+    .section {
+      padding: 10px 20px;
+    }
+
+    .section h2 {
+      margin-bottom: 14px;
+      font-size: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      background: #18181c;
+      border: 1px solid #29292f;
+      border-radius: 18px;
+      padding: 22px 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:active {
+      transform: scale(0.96);
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+    }
+
+    .card p {
+      color: #888;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: #151519;
+      border-top: 1px solid #29292f;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #aaa;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    nav button span {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+
+    .space {
+      height: 90px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Nini Hub 🪐</div>
+    <div class="subtitle">Games • Music • Videos • More</div>
+  </header>
+
+  <input
+    class="search"
+    type="text"
+    placeholder="Search anything..."
+  >
+
+  <div class="section">
+    <h2>Explore</h2>
+
+    <div class="grid">
+
+      <div class="card" onclick="openSection('games')">
+        <div class="icon">🎮</div>
+        <h3>Games</h3>
+        <p>Play & enjoy</p>
+      </div>
+
+      <div class="card" onclick="openSection('music')">
+        <div class="icon">🎵</div>
+        <h3>Music</h3>
+        <p>Listen & relax</p>
+      </div>
+
+      <div class="card" onclick="openSection('youtube')">
+        <div class="icon">▶️</div>
+        <h3>YouTube</h3>
+        <p>Watch videos</p>
+      </div>
+
+      <div class="card" onclick="openSection('more')">
+        <div class="icon">✨</div>
+        <h3>More</h3>
+        <p>Coming soon</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="space"></div>
+
+  <nav>
+    <button onclick="openSection('home')">
+      <span>🏠</span>
+      Home
+    </button>
+
+    <button onclick="openSection('games')">
+      <span>🎮</span>
+      Games
+    </button>
+
+    <button onclick="openSection('music')">
+      <span>🎵</span>
+      Music
+    </button>
+
+    <button onclick="openSection('profile')">
+      <span>👤</span>
+      Profile
+    </button>
+  </nav>
+
+  <script>
+    function openSection(section) {
+      alert("Nini Hub: " + section);
+    }
+  </script>
+
+</body>
+</html>
