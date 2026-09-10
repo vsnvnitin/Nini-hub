@@ -1,4 +1,4 @@
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,6 +199,17 @@
       alert("Nini Hub: " + section);
     }
   </script>
+<script>
+  const SUPABASE_URL = "https://ivqbpmrljthkixztxcyw.supabase.co";
 
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2cWJwbXJsanRoa2l4enR4Y3l3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkwNDE4MzcsImV4cCI6MjEwNDYxNzgzN30.bN09Lsb2N7WbWwudK8E1Qm1XxkxGL5xXRCSFU3q-TSg";
+
+  const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  console.log("Nini Hub connected to Supabase!");
+</script>
 </body>
 </html>
